@@ -100,7 +100,6 @@ cout << "Palyginti kursa ar pirkti arba parduoti valiuta" << endl;
     }
 
 
-
     if (Naudojant_valiuta == "GBP" || Naudojant_valiuta == "gbp" || Naudojant_valiuta == "Gbp" && Procesas == "Parduoti" ) {
         Pardavimas = GBP_Parduoti;
     }
