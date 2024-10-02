@@ -89,5 +89,60 @@ cout << "Palyginti kursa ar pirkti arba parduoti valiuta" << endl;
     }
 
 
+    if (Naudojant_valiuta == "GBP" || Naudojant_valiuta == "gbp" || Naudojant_valiuta == "Gbp" && Procesas == "Pirkti" ) {
+        Pardavimas = GBP_Pirkti;
+    }
+    if (Naudojant_valiuta == "USD" ||Naudojant_valiuta == "usd" ||Naudojant_valiuta == "Usd" && Procesas == "Pirkti" ) {
+        Pardavimas = USD_Pirkti;
+    }
+    if (Naudojant_valiuta == "INR" ||Naudojant_valiuta == "inr" ||Naudojant_valiuta == "Inr" && Procesas == "Pirkti" ) {
+        Pardavimas = INR_Pirkti;
+    }
+
+
+
+    if (Naudojant_valiuta == "GBP" || Naudojant_valiuta == "gbp" || Naudojant_valiuta == "Gbp" && Procesas == "Parduoti" ) {
+        Pardavimas = GBP_Parduoti;
+    }
+    if (Naudojant_valiuta == "USD" ||Naudojant_valiuta == "usd" ||Naudojant_valiuta == "Usd" && Procesas == "Parduoti" ) {
+        Pardavimas = USD_Parduoti;
+    }
+    if (Naudojant_valiuta == "INR" ||Naudojant_valiuta == "inr" ||Naudojant_valiuta == "Inr" && Procesas == "Parduoti" ) {
+        Pardavimas = INR_Parduoti   ;
+    }
+
+
+    double Skaicius;
+    double suma;
+    if (Pirkimas == GBP_Pirkti || Pirkimas == USD_Pirkti  || Pirkimas == INR_Pirkti) {
+        cout << "Kiek " << Pirkti_valiuta << " norite nupirkti" << endl;
+    cin >> Skaicius;
+    suma = Skaicius / Pirkimas;
+    suma = suma * Pardavimas;
+    cout << "Nusipirkote " << Skaicius << " " << Pirkti_valiuta << " uz " << fixed << setprecision(2) << suma << " " << Naudojant_valiuta << endl;
+}
+
+    if (Pirkti_valiuta == "EUR" || Pirkti_valiuta == "Eur" || Pirkti_valiuta == "eur") {
+        cout << "Kiek " << Pirkti_valiuta << " norite nupirkti" << endl;
+        cin >> Skaicius;
+        suma = Skaicius / Pardavimas;
+        cout << "Nusipirkote " << Skaicius << " " << Pirkti_valiuta << " uz " << fixed << setprecision(2) << suma << " " << Naudojant_valiuta << endl;
+    }
+
+
+    if (Parduoti == GBP_Parduoti || Parduoti == USD_Parduoti  || Parduoti == INR_Parduoti) {
+        cout << "Kiek " << Parduoti_valiuta << " norite parduoti" << endl;
+        cin >> Skaicius;
+        suma = Skaicius / Parduoti;
+        suma = suma * Pardavimas;
+        cout << "Pardavete " << Skaicius << " " << Parduoti_valiuta << " uz " << fixed << setprecision(2) << suma << " " << Naudojant_valiuta << endl;
+    }
+
+    if (Parduoti_valiuta == "EUR" || Parduoti_valiuta == "Eur" || Parduoti_valiuta == "eur") {
+        cout << "Kiek " << Parduoti_valiuta << " norite parduoti" << endl;
+        cin >> Skaicius;
+        suma = Skaicius * Pardavimas;
+        cout << "Pardavete " << Skaicius << " " << Parduoti_valiuta << " uz " << fixed << setprecision(2) << suma << " " << Naudojant_valiuta << endl;
+    }
     return 0;
 }
