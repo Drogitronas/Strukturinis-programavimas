@@ -1,3 +1,4 @@
+#include <future>
 #include <iomanip>
 #include <iostream>
 
@@ -13,135 +14,165 @@ int main() {
     double INR_Bendras = 88.8260;
     double INR_Pirkti = 85.2614;
     double INR_Parduoti = 92.8334;
-    string Procesas;
-    string Pirkti_valiuta;
-    string Parduoti_valiuta;
-    string Naudojant_valiuta;
-    string Pirmas_palyginimas;
-    string Antras_palyginimas;
-    double Pirmas_lyginimas;
-    double Antras_lyginimas;
-    double Parduoti;
-    double Pirkimas;
-    double Pardavimas;
-    double Pirmas_Skaicius;
-    double Antras_Skaicius;
-cout << "Palyginti kursa ar pirkti arba parduoti valiuta" << endl;
-    cin >> Procesas;
-    if (Procesas == "Pirkti" || Procesas == "pirkti") {
-        cout << "Pirkti kuria valiuta " << endl;
-        cin >> Pirkti_valiuta;
-        cout << "Kokia valiuta pirksite " << Pirkti_valiuta << " -us" <<  endl;
-        cin >> Naudojant_valiuta;
-    }  else if (Procesas == "Parduoti" || Procesas == "parduoti") {
-        cout << "Kokia valiuta parduoti " << endl;
-        cin >> Parduoti_valiuta;
-        cout << "Uz kokia valiuta parduosite " << Parduoti_valiuta << " -us"<< endl;
-        cin >> Naudojant_valiuta;
-    } else if (Procesas == "Palyginti kursa" || Procesas == "Palyginti kursa" || Procesas == "Palyginti" || Procesas == "palyginti") {
-        cout << "Kiek ir kokiu valiutu kursus palyginti?" << endl;
-        cin >> Pirmas_Skaicius >> Pirmas_palyginimas;
-        cin >> Antras_Skaicius >> Antras_palyginimas;
-        if (Pirmas_palyginimas == "USD" || Pirmas_palyginimas == "Usd" || Pirmas_palyginimas == "usd") {
-            Pirmas_lyginimas = USD_Bendras;
+
+    int pasirinkimas;
+    int Antras_pasirinkimas;
+    int Trecias_pasirinkimas;
+    double pirk_valiuta;
+    double pard_valiuta;
+    string kokia_valiuta;
+    double skaicius;
+    double Pirmas_palyginimas;
+    double Antras_palyginimas;
+    double Ketvirtas_pasirinkimas;
+
+    printf("Meniu:\n");
+    printf("1. Palyginimas\n");
+    printf("2. Pirkimas\n");
+    printf("3. Pardavimas\n");
+    printf("iveskite savo pasirinkima: ");
+    scanf("%d", &pasirinkimas);
+
+    switch (pasirinkimas) {
+        case 1:
+            printf("Jus pasirinkote palyginima.\n");
+        break;
+
+        case 2:
+            printf("Jus pasirinkote pirkima\n");
+        break;
+        case 3:
+            printf("Jus pasirinkote pardavima \n");
+        break;
+        default:
+            printf("Tokio pasirinkimo nera");
+    }
+    if (pasirinkimas == 1) {
+        printf("Meniu:\n");
+        printf("1. GBP\n");
+        printf("2. USD\n");
+        printf("3. INR\n");
+        printf("iveskite savo pasirinkima: ");
+        scanf("%d", &Trecias_pasirinkimas);
+
+        switch (Trecias_pasirinkimas) {
+            case 1:
+                printf("Jus pasirinkote palyginima.\n");
+            break;
+
+            case 2:
+                printf("Jus pasirinkote pirkima\n");
+            break;
+            case 3:
+                printf("Jus pasirinkote pardavima \n");
+            break;
+            default:
+                printf("Tokio pasirinkimo nera");
         }
-        if (Pirmas_palyginimas == "GBP" || Pirmas_palyginimas == "Gbp" || Pirmas_palyginimas == "gbp") {
-            Pirmas_lyginimas = GBP_Bendras;
+    }
+
+        if (pasirinkimas == 1) {
+            printf("Meniu:\n");
+            printf("1. GBP\n");
+            printf("2. USD\n");
+            printf("3. INR\n");
+            printf("iveskite savo pasirinkima: ");
+            scanf("%d", &Trecias_pasirinkimas);
+
+            switch (Trecias_pasirinkimas) {
+                case 1:
+                    printf("Jus pasirinkote GBP.\n");
+                Pirmas_palyginimas=GBP_Bendras;
+                kokia_valiuta="GBP";
+                break;
+
+                case 2:
+                    printf("Jus pasirinkote USD\n");
+                Pirmas_palyginimas=USD_Bendras;
+                kokia_valiuta="USD";
+                break;
+                case 3:
+                    printf("Jus pasirinkote INR \n");
+                Pirmas_palyginimas=INR_Bendras;
+                kokia_valiuta="INR";
+                break;
+                default:
+                    printf("Tokio pasirinkimo nera");
+            }
+            cout << "Su kokia valiuta lyginsit:" << endl;
+            printf("1. GBP\n");
+            printf("2. USD\n");
+            printf("3. INR\n");
+            printf("iveskite savo pasirinkima: ");
+            scanf("%d", &Trecias_pasirinkimas);
+
+            switch (Trecias_pasirinkimas) {
+                case 1:
+                    printf("Jus pasirinkote GBP.\n");
+                Pirmas_palyginimas=GBP_Bendras;
+                kokia_valiuta="GBP";
+                break;
+
+                case 2:
+                    printf("Jus pasirinkote USD\n");
+                Pirmas_palyginimas=USD_Bendras;
+                kokia_valiuta="USD";
+                break;
+                case 3:
+                    printf("Jus pasirinkote INR \n");
+                Pirmas_palyginimas=INR_Bendras;
+                kokia_valiuta="INR";
+                break;
+                default:
+                    printf("Tokio pasirinkimo nera");
+            }
         }
-        if (Pirmas_palyginimas == "INR" || Pirmas_palyginimas == "Inr" || Pirmas_palyginimas == "inr") {
-            Pirmas_lyginimas = INR_Bendras;
+
+        if (pasirinkimas == 2 || pasirinkimas == 3) {
+            printf("Meniu:\n");
+            printf("1. GBP\n");
+            printf("2. USD\n");
+            printf("3. INR\n");
+            printf("iveskite savo pasirinkima: ");
+            scanf("%d", &Antras_pasirinkimas);
+
+            switch (Antras_pasirinkimas) {
+                case 1:
+                    printf("Jus pasirinkote GBP.\n");
+                pirk_valiuta=GBP_Parduoti;
+                pard_valiuta=GBP_Pirkti;
+                kokia_valiuta="GBP";
+                break;
+
+                case 2:
+                    printf("Jus pasirinkote USD\n");
+                pirk_valiuta=USD_Parduoti;
+                pard_valiuta=USD_Pirkti;
+                kokia_valiuta="USD";
+                break;
+                case 3:
+                    printf("Jus pasirinkote INR \n");
+                pirk_valiuta=INR_Parduoti;
+                pard_valiuta=INR_Pirkti;
+                kokia_valiuta="INR";
+                break;
+                default:
+                    printf("Tokio pasirinkimo nera");
+            }
+            if (pasirinkimas == 2) {
+                cout << "Kiek norite nusipirkti: ";
+                cin >> skaicius;
+            } else if (pasirinkimas == 3) {
+                cout << "Kiek norite parduoti: ";
+                cin >> skaicius;
+            }
+            if (pasirinkimas == 2) {
+                cout << " Nusipirkote " << fixed << setprecision(2) << skaicius << " " << kokia_valiuta  <<" uz " << fixed << setprecision(2) << skaicius / pard_valiuta  << " eur" <<  endl;
+                system("pause");
+            } else if (pasirinkimas == 3) {
+                cout << " Pardavete " << fixed << setprecision(2) << skaicius << " " << kokia_valiuta  <<" uz " << fixed << setprecision(2) << skaicius / pirk_valiuta  << " eur" <<  endl;
+                system("pause");
+            }
         }
-        if (Antras_palyginimas == "USD" || Antras_palyginimas == "Usd" || Antras_palyginimas == "usd") {
-            Antras_lyginimas = USD_Bendras;
-        }
-        if (Antras_palyginimas == "GBP" || Antras_palyginimas == "Gbp" || Antras_palyginimas == "gbp") {
-            Antras_lyginimas = GBP_Bendras;
-        }
-        if (Antras_palyginimas == "INR" || Antras_palyginimas == "Inr" || Antras_palyginimas == "inr") {
-            Antras_lyginimas = INR_Bendras;
-        }
-        double VienasLyginti =  Pirmas_Skaicius / Pirmas_lyginimas ;
-        double DuLyginti =  Antras_Skaicius / Antras_lyginimas ;
-        cout << "Uz " << Pirmas_Skaicius << " " << Pirmas_palyginimas << " gaunat " << fixed << setprecision(2) << VienasLyginti << " EUR" << endl;
-        cout << "O uz " << Antras_Skaicius << " " << Antras_palyginimas << " gaunat " << fixed << setprecision(2) << DuLyginti << " Eur" << endl;
-    }
-
-    //-------------------------------valiutos suradimas
-    if (Pirkti_valiuta == "GBP" || Pirkti_valiuta == "gbp" || Pirkti_valiuta == "Gbp" && Procesas == "Pirkti" ) {
-        Pirkimas = GBP_Pirkti;
-    }
-    if (Pirkti_valiuta == "USD" ||Pirkti_valiuta == "usd" ||Pirkti_valiuta == "Usd" && Procesas == "Pirkti" ) {
-        Pirkimas = USD_Pirkti;
-    }
-    if (Pirkti_valiuta == "INR" ||Pirkti_valiuta == "inr" ||Pirkti_valiuta == "Inr" && Procesas == "Pirkti" ) {
-        Pirkimas = INR_Pirkti;
-    }
-
-
-    if (Parduoti_valiuta == "GBP" || Parduoti_valiuta == "gbp" || Parduoti_valiuta == "Gbp" && Procesas == "Parduoti" ) {
-        Parduoti = GBP_Parduoti;
-    }
-    if (Parduoti_valiuta == "USD" || Parduoti_valiuta == "usd" || Parduoti_valiuta == "Usd" && Procesas == "Parduoti" ) {
-        Parduoti = USD_Parduoti;
-    }
-    if (Parduoti_valiuta == "INR" || Parduoti_valiuta == "inr" || Parduoti_valiuta == "Inr" && Procesas == "Parduoti" ) {
-        Parduoti = INR_Parduoti;
-    }
-
-
-    if (Naudojant_valiuta == "GBP" || Naudojant_valiuta == "gbp" || Naudojant_valiuta == "Gbp" && Procesas == "Pirkti" ) {
-        Pardavimas = GBP_Pirkti;
-    }
-    if (Naudojant_valiuta == "USD" ||Naudojant_valiuta == "usd" ||Naudojant_valiuta == "Usd" && Procesas == "Pirkti" ) {
-        Pardavimas = USD_Pirkti;
-    }
-    if (Naudojant_valiuta == "INR" ||Naudojant_valiuta == "inr" ||Naudojant_valiuta == "Inr" && Procesas == "Pirkti" ) {
-        Pardavimas = INR_Pirkti;
-    }
-
-
-    if (Naudojant_valiuta == "GBP" || Naudojant_valiuta == "gbp" || Naudojant_valiuta == "Gbp" && Procesas == "Parduoti" ) {
-        Pardavimas = GBP_Parduoti;
-    }
-    if (Naudojant_valiuta == "USD" ||Naudojant_valiuta == "usd" ||Naudojant_valiuta == "Usd" && Procesas == "Parduoti" ) {
-        Pardavimas = USD_Parduoti;
-    }
-    if (Naudojant_valiuta == "INR" ||Naudojant_valiuta == "inr" ||Naudojant_valiuta == "Inr" && Procesas == "Parduoti" ) {
-        Pardavimas = INR_Parduoti   ;
-    }
-
-
-    double Skaicius;
-    double suma;
-    if (Pirkimas == GBP_Pirkti || Pirkimas == USD_Pirkti  || Pirkimas == INR_Pirkti) {
-        cout << "Kiek " << Pirkti_valiuta << " norite nupirkti" << endl;
-    cin >> Skaicius;
-    suma = Skaicius / Pirkimas;
-    suma = suma * Pardavimas;
-    cout << "Nusipirkote " << Skaicius << " " << Pirkti_valiuta << " uz " << fixed << setprecision(2) << suma << " " << Naudojant_valiuta << endl;
-}
-
-    if (Pirkti_valiuta == "EUR" || Pirkti_valiuta == "Eur" || Pirkti_valiuta == "eur") {
-        cout << "Kiek " << Pirkti_valiuta << " norite nupirkti" << endl;
-        cin >> Skaicius;
-        suma = Skaicius / Pardavimas;
-        cout << "Nusipirkote " << Skaicius << " " << Pirkti_valiuta << " uz " << fixed << setprecision(2) << suma << " " << Naudojant_valiuta << endl;
-    }
-
-
-    if (Parduoti == GBP_Parduoti || Parduoti == USD_Parduoti  || Parduoti == INR_Parduoti) {
-        cout << "Kiek " << Parduoti_valiuta << " norite parduoti" << endl;
-        cin >> Skaicius;
-        suma = Skaicius / Parduoti;
-        suma = suma * Pardavimas;
-        cout << "Pardavete " << Skaicius << " " << Parduoti_valiuta << " uz " << fixed << setprecision(2) << suma << " " << Naudojant_valiuta << endl;
-    }
-
-    if (Parduoti_valiuta == "EUR" || Parduoti_valiuta == "Eur" || Parduoti_valiuta == "eur") {
-        cout << "Kiek " << Parduoti_valiuta << " norite parduoti" << endl;
-        cin >> Skaicius;
-        suma = Skaicius * Pardavimas;
-        cout << "Pardavete " << Skaicius << " " << Parduoti_valiuta << " uz " << fixed << setprecision(2) << suma << " " << Naudojant_valiuta << endl;
-    }
     return 0;
-}
+        }

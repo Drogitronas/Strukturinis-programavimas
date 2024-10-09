@@ -3,4 +3,5 @@ project(Strukt)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Strukt Valiuta.cpp)
+add_executable(Strukt Valiuta.cpp
+        Valiuta.cpp)
