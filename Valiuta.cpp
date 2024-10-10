@@ -17,14 +17,17 @@ int main() {
 
     int pasirinkimas;
     int Antras_pasirinkimas;
-    int Trecias_pasirinkimas;
+
     double pirk_valiuta;
     double pard_valiuta;
     string kokia_valiuta;
+    string Pirmas_kokia_valiuta;
+    string Antras_kokia_valiuta;
     double skaicius;
     double Pirmas_palyginimas;
     double Antras_palyginimas;
-    double Ketvirtas_pasirinkimas;
+    int Trecias_pasirinkimas;
+    int Ketvirtas_pasirinkimas;
 
     printf("Meniu:\n");
     printf("1. Palyginimas\n");
@@ -47,30 +50,6 @@ int main() {
         default:
             printf("Tokio pasirinkimo nera");
     }
-    if (pasirinkimas == 1) {
-        printf("Meniu:\n");
-        printf("1. GBP\n");
-        printf("2. USD\n");
-        printf("3. INR\n");
-        printf("iveskite savo pasirinkima: ");
-        scanf("%d", &Trecias_pasirinkimas);
-
-        switch (Trecias_pasirinkimas) {
-            case 1:
-                printf("Jus pasirinkote palyginima.\n");
-            break;
-
-            case 2:
-                printf("Jus pasirinkote pirkima\n");
-            break;
-            case 3:
-                printf("Jus pasirinkote pardavima \n");
-            break;
-            default:
-                printf("Tokio pasirinkimo nera");
-        }
-    }
-
         if (pasirinkimas == 1) {
             printf("Meniu:\n");
             printf("1. GBP\n");
@@ -83,18 +62,18 @@ int main() {
                 case 1:
                     printf("Jus pasirinkote GBP.\n");
                 Pirmas_palyginimas=GBP_Bendras;
-                kokia_valiuta="GBP";
+                Pirmas_kokia_valiuta="GBP";
                 break;
 
                 case 2:
                     printf("Jus pasirinkote USD\n");
                 Pirmas_palyginimas=USD_Bendras;
-                kokia_valiuta="USD";
+                Pirmas_kokia_valiuta="USD";
                 break;
                 case 3:
                     printf("Jus pasirinkote INR \n");
                 Pirmas_palyginimas=INR_Bendras;
-                kokia_valiuta="INR";
+                Pirmas_kokia_valiuta="INR";
                 break;
                 default:
                     printf("Tokio pasirinkimo nera");
@@ -104,31 +83,35 @@ int main() {
             printf("2. USD\n");
             printf("3. INR\n");
             printf("iveskite savo pasirinkima: ");
-            scanf("%d", &Trecias_pasirinkimas);
+            scanf("%d", &Ketvirtas_pasirinkimas);
 
-            switch (Trecias_pasirinkimas) {
+            switch (Ketvirtas_pasirinkimas) {
                 case 1:
                     printf("Jus pasirinkote GBP.\n");
-                Pirmas_palyginimas=GBP_Bendras;
-                kokia_valiuta="GBP";
+                Antras_palyginimas=GBP_Bendras;
+                Antras_kokia_valiuta="GBP";
                 break;
 
                 case 2:
                     printf("Jus pasirinkote USD\n");
-                Pirmas_palyginimas=USD_Bendras;
-                kokia_valiuta="USD";
+                Antras_palyginimas=USD_Bendras;
+                Antras_kokia_valiuta="USD";
                 break;
                 case 3:
                     printf("Jus pasirinkote INR \n");
-                Pirmas_palyginimas=INR_Bendras;
-                kokia_valiuta="INR";
+                Antras_palyginimas=INR_Bendras;
+                Antras_kokia_valiuta="INR";
                 break;
                 default:
                     printf("Tokio pasirinkimo nera");
             }
+cout << Pirmas_kokia_valiuta << " bendras kursas yra " << Pirmas_palyginimas << endl;
+            cout << Antras_kokia_valiuta << " bendras kursa kursa yra " << Antras_palyginimas << endl;
+
         }
 
-        if (pasirinkimas == 2 || pasirinkimas == 3) {
+
+    if (pasirinkimas == 2 || pasirinkimas == 3) {
             printf("Meniu:\n");
             printf("1. GBP\n");
             printf("2. USD\n");
