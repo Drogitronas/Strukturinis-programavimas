@@ -1,3 +1,0 @@
-C:/Users/Mode/Desktop/Strukt/cmake-build-debug/CMakeFiles/Strukt.dir
-C:/Users/Mode/Desktop/Strukt/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Mode/Desktop/Strukt/cmake-build-debug/CMakeFiles/rebuild_cache.dir
