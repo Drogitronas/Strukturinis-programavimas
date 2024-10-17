@@ -7,9 +7,9 @@ using namespace std;
 void Pirmas_Zaidimas (int &pasirinkimas);
 void Antras_Zaidimas (int skaicius1, int skaicius2, int &pasirinkimas, int dbd );
 void Trecias_Zaidimas (int &pasirinkimas);
-void Ketvirtas_Zaidimas (int &pasirinkimas);
+void fizzbuzz (int &pasirinkimas, int n);
 int main() {
-    int skacius1, skaicius2, pasirinkimas, dbd;
+    int skacius1, skaicius2, pasirinkimas, dbd, n;
     printf("Meniu:\n");
     printf("1. Raides\n");
     printf("2. Euklidas\n");
@@ -38,7 +38,7 @@ int main() {
     Pirmas_Zaidimas(pasirinkimas);
     Antras_Zaidimas(skacius1,skaicius2,pasirinkimas,dbd);
     Trecias_Zaidimas(pasirinkimas);
-    Ketvirtas_Zaidimas(pasirinkimas);
+    fizzbuzz(pasirinkimas,n);
 
 
 
@@ -94,14 +94,18 @@ void Trecias_Zaidimas (int &pasirinkimas) {
         }
     }
 }
-void Ketvirtas_Zaidimas (int &pasirinkimas) {
+void fizzbuzz (int &pasirinkimas, int n) {
     if (pasirinkimas == 4) {
         int Skaicius=0;
         cout << "Yveskite teigiama kintamajy skaiciu: ";
         cin >> Skaicius;
         for (int i = 1; i <= Skaicius; i++) {
             cout << i << endl;
+            if(i % 3 ==0) cout << "Fizz" << endl;
+            if(i % 5 ==0) cout << "Buzz" << endl;
+            if(i % 3 ==0 && i % 5 ==0) cout << "Fizzbuzz" << endl;
         }
+
     }
 }
 
