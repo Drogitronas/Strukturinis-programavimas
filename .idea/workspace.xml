@@ -13,7 +13,9 @@
     <option name="reloaded" value="true" />
   </component>
   <component name="CMakeRunConfigurationManager">
-    <generated />
+    <generated>
+      <config projectName="Strukt" targetName="Strukt" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -22,49 +24,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25065cb1-f2d9-4366-8928-0ee3c5314c04" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Strukt.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Valiuta.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-d483eac5d6fa0e98d3e9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-7c03483999f7b9d7426f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-f4b4765e6f9d80e696cd.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-10-03T08-02-47-0875.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Strukt-Debug-c8db56dbe93467a88409.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-8ce3f78fc5758414dfe9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.29.6/CompilerIdCXX/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Strukt.dir/Valiuta.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Strukt.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valiuta/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/Valiuta/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valiuta/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/Valiuta/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valiuta/cmake-build-debug/Strukt.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Valiuta/cmake-build-debug/Strukt.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Valiuta/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/Valiuta/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +92,11 @@
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Strukt" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Strukt" TARGET_NAME="Strukt" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Strukt" RUN_TARGET_NAME="Strukt">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -144,6 +113,8 @@
       <workItem from="1728380531402" duration="2237000" />
       <workItem from="1728495099868" duration="12243000" />
       <workItem from="1728544851040" duration="1539000" />
+      <workItem from="1728546806090" duration="66000" />
+      <workItem from="1729056661073" duration="331000" />
     </task>
     <servers />
   </component>
