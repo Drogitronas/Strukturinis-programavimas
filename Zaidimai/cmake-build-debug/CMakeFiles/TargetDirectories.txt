@@ -1,0 +1,3 @@
+C:/Users/Mode/Desktop/Strukt/Zaidimai/cmake-build-debug/CMakeFiles/Zaidimai.dir
+C:/Users/Mode/Desktop/Strukt/Zaidimai/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Mode/Desktop/Strukt/Zaidimai/cmake-build-debug/CMakeFiles/rebuild_cache.dir
