@@ -4,9 +4,9 @@
 #include <cstdlib>
 
 using namespace std;
-void Pirmas_Zaidimas (int &pasirinkimas);
-void Antras_Zaidimas (int skaicius1, int skaicius2, int &pasirinkimas, int dbd );
-void Trecias_Zaidimas (int &pasirinkimas);
+void Raides (int &pasirinkimas);
+void Euklidas (int skaicius1, int skaicius2, int &pasirinkimas, int dbd );
+void Skaiciaus_spejimas (int &pasirinkimas);
 void fizzbuzz (int &pasirinkimas, int n);
 int main() {
     int skacius1, skaicius2, pasirinkimas, dbd, n;
@@ -35,16 +35,16 @@ int main() {
             printf("Tokio pasirinkimo nera");
     }
 
-    Pirmas_Zaidimas(pasirinkimas);
-    Antras_Zaidimas(skacius1,skaicius2,pasirinkimas,dbd);
-    Trecias_Zaidimas(pasirinkimas);
+    Raides(pasirinkimas);
+    Euklidas(skacius1,skaicius2,pasirinkimas,dbd);
+    Skaiciaus_spejimas(pasirinkimas);
     fizzbuzz(pasirinkimas,n);
 
 
 
 return 0;
     }
-    void Pirmas_Zaidimas (int &pasirinkimas) {
+    void Raides (int &pasirinkimas) {
     if (pasirinkimas ==1) {
         cout << pasirinkimas << endl;
         char raide;
@@ -60,7 +60,7 @@ return 0;
                 }else cout << "False" << endl;
     }
 }
-void Antras_Zaidimas (int skaicius1, int skaicius2, int &pasirinkimas, int dbd ) {
+void Euklidas (int skaicius1, int skaicius2, int &pasirinkimas, int dbd ) {
 if (pasirinkimas ==2) {
 cout << "Yveskite pirmus skaicius"  << endl;
     cin >> skaicius1;
@@ -73,12 +73,11 @@ cout << "Yveskite pirmus skaicius"  << endl;
 cout << dbd;
 }
 }
-void Trecias_Zaidimas (int &pasirinkimas) {
+void Skaiciaus_spejimas (int &pasirinkimas) {
     if (pasirinkimas == 3) {
         int Spejimas=0;
         srand(time(nullptr));
         int r = rand() % 100 ;
-        cout << r << endl;
 
         while (Spejimas != r) {
             cin >> Spejimas;
