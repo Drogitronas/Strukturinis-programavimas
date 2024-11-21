@@ -1,8 +1,10 @@
+#include <algorithm>
 #include <iostream>
 #include <string>
 #include <vector>
 #include <locale>
 #include <cctype>
+#include <bits/ranges_algo.h>
 
 using namespace std;
 
@@ -124,7 +126,7 @@ void Antras_Budas(int &pasirinkimas) {
                 wcout << L"Pasirinkote dešifruoti.\n";
             break;
             case 3:
-                wcout << L"Grįžot\n\n";
+                wcout << L"Gryžot\n\n";
             return;
             default:
                 wcout << L"Neteisingas pasirinkimas.\n";
@@ -132,27 +134,31 @@ void Antras_Budas(int &pasirinkimas) {
         }
         string zodis;
         string raktas;
-        string uzrakintas_zodis = " ";
+        char uzrakintas_zodis;
         string atrakintas_zodis = " ";
         cout << "Yveskite zody " << endl;
         cin >> zodis;
         cout << "Yveskite rakta"<< endl;
         cin >> raktas;
-         if (Pirmas_pasirinkimas == 1) {
-             for (int i = 0; i < zodis.length(); i++) {
-                 uzrakintas_zodis = (zodis[i]) + (raktas[i % raktas.length()]) % 95 + 32;
-                 cout << uzrakintas_zodis;
-             }
-             cout << endl;
-         }
 
-         if (Pirmas_pasirinkimas == 2) {
-             for (int i = 0; i < zodis.length(); i++) {
-                 char atrakintas_zodis = (zodis[i] - raktas[i % raktas.length()] - 32 + 95) % 95 + 32;
-                 cout << atrakintas_zodis;
-             }
-             cout << endl;
-         }
+        transform(zodis.begin(), zodis.end(), zodis.begin(), ::toupper);
+        transform(raktas.begin(), raktas.end(), raktas.begin(),::toupper);
+
+        if (Pirmas_pasirinkimas == 1) {
+            for (int i = 0; i < zodis.length(); i++) {
+                uzrakintas_zodis = ((zodis[i] - 32) + (raktas[i % raktas.length()] - 32)) % 95 + 32;
+                cout << uzrakintas_zodis;
+            }
+            cout << endl;
+        }
+
+        if (Pirmas_pasirinkimas == 2) {
+            for (int i = 0; i < zodis.length(); i++) {
+                char atrakintas_zodis = (zodis[i] - (raktas[i % raktas.length()] - 32) + 95) % 95 + 32;
+                cout << atrakintas_zodis;
+            }
+            cout << endl;
+        }
 
         }
     }
