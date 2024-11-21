@@ -136,9 +136,9 @@ void Antras_Budas(int &pasirinkimas) {
         string raktas;
         char uzrakintas_zodis;
         string atrakintas_zodis = " ";
-        cout << "Yveskite zody " << endl;
+        wcout << L"Įveskite žodį:" << endl;
         cin >> zodis;
-        cout << "Yveskite rakta"<< endl;
+        wcout << L"Įveskite raktą:" << endl;
         cin >> raktas;
 
         transform(zodis.begin(), zodis.end(), zodis.begin(), ::toupper);
