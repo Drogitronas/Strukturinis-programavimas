@@ -119,6 +119,7 @@ void fizzbuzz (int &pasirinkimas, int n) {
         cout << "Yveskite teigiama kintamajy skaiciu: ";
         cin >> Skaicius;
         for (int i = 1; i <= Skaicius; i++) {
+            //cout << i;
             if (i % 3 ==0 && i % 5 ==0) {
                 cout << "Fizzbuzz" << endl;
 
@@ -128,3 +129,4 @@ void fizzbuzz (int &pasirinkimas, int n) {
 
     }
 }
+
