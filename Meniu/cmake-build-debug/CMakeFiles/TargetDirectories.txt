@@ -1,0 +1,3 @@
+C:/Users/Mode/Desktop/Strukt/Meniu/cmake-build-debug/CMakeFiles/Meniu.dir
+C:/Users/Mode/Desktop/Strukt/Meniu/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Mode/Desktop/Strukt/Meniu/cmake-build-debug/CMakeFiles/rebuild_cache.dir

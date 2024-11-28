@@ -1,0 +1,3 @@
+C:/Users/Mode/Desktop/Strukt/Kontrolinis/cmake-build-debug/CMakeFiles/Kontrolinis.dir
+C:/Users/Mode/Desktop/Strukt/Kontrolinis/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Mode/Desktop/Strukt/Kontrolinis/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -18,18 +18,18 @@ int main() {
     while (true) {
         cout << endl;
         wcout << L"Meniu\n";
-        wcout << L"1. Pirmas zaidimas\n";
-        wcout << L"2. Antras zaidimas\n";
+        wcout << L"1. Vigenere šifravimas\n";
+        wcout << L"2. ASCII šifravimas\n";
         wcout << L"3. Iseiti\n";
         wcin >> pasirinkimas;
 
         switch (pasirinkimas) {
             case 1:
-                wcout << L"Pasirinkote pirma zaidima.\n";
+                wcout << L"Pasirinkote vigenere šifravimą.\n";
                 Pirmas_Budas(pasirinkimas);
                 break;
             case 2:
-                wcout << L"Pasirinkote antra zaidima.\n";
+                wcout << L"Pasirinkote ASCII šifravimą.\n";
                 Antras_Budas(pasirinkimas);
                 break;
             case 3:
@@ -162,6 +162,3 @@ void Antras_Budas(int &pasirinkimas) {
 
         }
     }
-
-
-

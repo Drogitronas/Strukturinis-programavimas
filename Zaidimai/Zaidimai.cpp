@@ -129,4 +129,3 @@ void fizzbuzz (int &pasirinkimas, int n) {
 
     }
 }
-
