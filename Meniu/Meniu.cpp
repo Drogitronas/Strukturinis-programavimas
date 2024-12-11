@@ -71,10 +71,8 @@ void printCheck(menuItemType menu[], int parinktas_Patiekalas[]) {
 int main() {
     int parinktas_Patiekalas[100];
     menuItemType menu[8];
-
     getData(menu);
     ShowMenu(menu, parinktas_Patiekalas);
     printCheck(menu, parinktas_Patiekalas);
-
     return 0;
 }
