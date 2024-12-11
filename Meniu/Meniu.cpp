@@ -27,7 +27,7 @@ void ShowMenu(menuItemType menu[], int parinktas_Patiekalas[]) {
     while (true) {
         for (int i = 0; i < 8; i++) {
             cout << i << " " << menu[i].menuItem << " - "
-                 << fixed << setprecision(2) << menu[i].menuPrice << " EUR" << endl;
+                    << fixed << setprecision(2) << menu[i].menuPrice << " EUR" << endl;
         }
         cout << "Pasirinkite patiekalo skaiciu, arba jei norite baikti uzsakyma parasykite 8:" << endl;
 
@@ -42,7 +42,7 @@ void ShowMenu(menuItemType menu[], int parinktas_Patiekalas[]) {
             cout << "Neteisingas pasirinkimas, bandykite dar karta." << endl;
         }
     }
-    parinktas_Patiekalas[j] = -1; // Mark end of orders
+    parinktas_Patiekalas[j] = -1;
 }
 
 void printCheck(menuItemType menu[], int parinktas_Patiekalas[]) {
@@ -57,8 +57,8 @@ void printCheck(menuItemType menu[], int parinktas_Patiekalas[]) {
 
     for (int i = 0; i < 8; i++) {
         if (Kartu_pirktas[i] > 0) {
-            cout << Kartu_pirktas[i] << " "  << menu[i].menuItem << " - "
-                 << fixed << setprecision(2) << menu[i].menuPrice * Kartu_pirktas[i] << " EUR" << endl;
+            cout << Kartu_pirktas[i] << " " << menu[i].menuItem << " - "
+                    << fixed << setprecision(2) << menu[i].menuPrice * Kartu_pirktas[i] << " EUR" << endl;
             total += menu[i].menuPrice * Kartu_pirktas[i];
         }
     }
