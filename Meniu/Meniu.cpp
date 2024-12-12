@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -46,7 +47,9 @@ void ShowMenu(menuItemType menu[], int parinktas_Patiekalas[]) {
 }
 
 void printCheck(menuItemType menu[], int parinktas_Patiekalas[]) {
+    ofstream out("Saskaita.txt");
     cout << "\nJusu uzsakymas:\n";
+    out << "\nJusu uzsakymas:\n";
     double total = 0.0;
     int Kartu_pirktas[8] = {0};
 
@@ -57,8 +60,8 @@ void printCheck(menuItemType menu[], int parinktas_Patiekalas[]) {
 
     for (int i = 0; i < 8; i++) {
         if (Kartu_pirktas[i] > 0) {
-            cout << Kartu_pirktas[i] << " " << menu[i].menuItem << " - "
-                    << fixed << setprecision(2) << menu[i].menuPrice * Kartu_pirktas[i] << " EUR" << endl;
+            cout << Kartu_pirktas[i] << " " << menu[i].menuItem << " - " << fixed << setprecision(2) << menu[i].menuPrice * Kartu_pirktas[i] << " EUR" << endl;
+            out << Kartu_pirktas[i] << " " << menu[i].menuItem << " - " << fixed << setprecision(2) << menu[i].menuPrice * Kartu_pirktas[i] << " EUR" << endl;
             total += menu[i].menuPrice * Kartu_pirktas[i];
         }
     }
@@ -66,6 +69,9 @@ void printCheck(menuItemType menu[], int parinktas_Patiekalas[]) {
     double tax = total * 0.21;
     cout << "Mokesciai: " << fixed << setprecision(2) << tax << " EUR" << endl;
     cout << "Galutine suma: " << fixed << setprecision(2) << (total + tax) << " EUR" << endl;
+    out << "Mokesciai: " << fixed << setprecision(2) << tax << " EUR" << endl;
+    out << "Galutine suma: " << fixed << setprecision(2) << (total + tax) << " EUR" << endl;
+    out.close();
 }
 
 int main() {
