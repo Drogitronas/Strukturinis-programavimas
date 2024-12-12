@@ -21,7 +21,7 @@ void getData(menuItemType menu[]) {
     menu[7] = {"Arbata", 0.75};
 }
 
-void ShowMenu(menuItemType menu[], int parinktas_Patiekalas[]) {
+void ShowMenu(menuItemType menu[], int parinktas_Patiekalas[], int Kartu[]) {
     int j = 0;
     cout << "Sveiki atvyke y restorana Bouzaidi!" << endl;
 
@@ -35,10 +35,16 @@ void ShowMenu(menuItemType menu[], int parinktas_Patiekalas[]) {
         int Parinktas;
         cin >> Parinktas;
 
+        int Kartus;
+        if (Parinktas != 8) {
+            cout << "Kiek norite sito patiekalo porciju: " << endl;
+            cin >> Kartus;
+        }
         if (Parinktas == 8) {
             break;
         } else if (Parinktas >= 0 && Parinktas < 8) {
             parinktas_Patiekalas[j++] = Parinktas;
+            Kartu[j] = Kartus;
         } else {
             cout << "Neteisingas pasirinkimas, bandykite dar karta." << endl;
         }
@@ -46,7 +52,7 @@ void ShowMenu(menuItemType menu[], int parinktas_Patiekalas[]) {
     parinktas_Patiekalas[j] = -1;
 }
 
-void printCheck(menuItemType menu[], int parinktas_Patiekalas[]) {
+void printCheck(menuItemType menu[], int parinktas_Patiekalas[], int Kartu[]) {
     ofstream out("Saskaita.txt");
     cout << "\nJusu uzsakymas:\n";
     out << "\nJusu uzsakymas:\n";
@@ -55,30 +61,30 @@ void printCheck(menuItemType menu[], int parinktas_Patiekalas[]) {
 
     for (int i = 0; parinktas_Patiekalas[i] != -1; i++) {
         int index = parinktas_Patiekalas[i];
-        Kartu_pirktas[index]++;
+        Kartu_pirktas[index] =Kartu[index];
     }
 
     for (int i = 0; i < 8; i++) {
         if (Kartu_pirktas[i] > 0) {
-            cout << Kartu_pirktas[i] << " " << menu[i].menuItem << " - " << fixed << setprecision(2) << menu[i].menuPrice * Kartu_pirktas[i] << " EUR" << endl;
-            out << Kartu_pirktas[i] << " " << menu[i].menuItem << " - " << fixed << setprecision(2) << menu[i].menuPrice * Kartu_pirktas[i] << " EUR" << endl;
+            cout  << Kartu_pirktas[i] << " "  << setw(40) << menu[i].menuItem << " - " << fixed << setprecision(2) << menu[i].menuPrice * Kartu_pirktas[i] << " EUR" << endl;
+            out   << Kartu_pirktas[i] << " " <<right << setw(40) <<menu[i].menuItem << " - " << fixed << setprecision(2) << menu[i].menuPrice * Kartu_pirktas[i] << " EUR" << endl;
             total += menu[i].menuPrice * Kartu_pirktas[i];
         }
     }
 
     double tax = total * 0.21;
-    cout << "Mokesciai: " << fixed << setprecision(2) << tax << " EUR" << endl;
-    cout << "Galutine suma: " << fixed << setprecision(2) << (total + tax) << " EUR" << endl;
-    out << "Mokesciai: " << fixed << setprecision(2) << tax << " EUR" << endl;
-    out << "Galutine suma: " << fixed << setprecision(2) << (total + tax) << " EUR" << endl;
+    cout  <<  "Mokesciai: "  << fixed << setprecision(2) << tax << " EUR" << endl;
+    cout << "Galutine suma: "  << fixed << setprecision(2) << (total + tax) << " EUR" << endl;
+    out  <<  "Mokesciai: "  << fixed << setprecision(2) << tax << " EUR" << endl;
+    out << "Galutine suma: "  << fixed << setprecision(2) << (total + tax) << " EUR" << endl;
     out.close();
 }
 
 int main() {
-    int parinktas_Patiekalas[100];
+    int parinktas_Patiekalas[100], Kartu[100];
     menuItemType menu[8];
     getData(menu);
-    ShowMenu(menu, parinktas_Patiekalas);
-    printCheck(menu, parinktas_Patiekalas);
+    ShowMenu(menu, parinktas_Patiekalas, Kartu);
+    printCheck(menu, parinktas_Patiekalas, Kartu);
     return 0;
 }
