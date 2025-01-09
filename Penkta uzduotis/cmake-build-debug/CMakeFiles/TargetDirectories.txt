@@ -1,0 +1,3 @@
+C:/Users/Mode/Desktop/Strukt/Penkta uzduotis/cmake-build-debug/CMakeFiles/Penkta_uzduotis.dir
+C:/Users/Mode/Desktop/Strukt/Penkta uzduotis/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Mode/Desktop/Strukt/Penkta uzduotis/cmake-build-debug/CMakeFiles/rebuild_cache.dir
