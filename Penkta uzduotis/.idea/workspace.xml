@@ -23,7 +23,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6d7490a-c1d4-4be5-9255-d498267cee39" name="Changes" comment="Kartu sutvarkymas" />
+    <list default="true" id="b6d7490a-c1d4-4be5-9255-d498267cee39" name="Changes" comment="Nepaskutins" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +115,7 @@
       <workItem from="1734597070381" duration="4433000" />
       <workItem from="1736362300430" duration="3456000" />
       <workItem from="1736366200749" duration="1145000" />
-      <workItem from="1736410875411" duration="427000" />
+      <workItem from="1736410875411" duration="1058000" />
     </task>
     <task id="LOCAL-00001" summary="Finalas">
       <option name="closed" value="true" />
@@ -189,7 +189,31 @@
       <option name="project" value="LOCAL" />
       <updated>1736410943846</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Paskutinis pusha">
+      <option name="closed" value="true" />
+      <created>1736411446133</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1736411446133</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Paskutinis pusha">
+      <option name="closed" value="true" />
+      <created>1736411534273</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1736411534273</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Nepaskutins">
+      <option name="closed" value="true" />
+      <created>1736411939247</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1736411939247</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +230,10 @@
     <MESSAGE value="Trecias kartas, truksta" />
     <MESSAGE value="Failo isvedimas" />
     <MESSAGE value="Antras pushas" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'" />
     <MESSAGE value="Kartu sutvarkymas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kartu sutvarkymas" />
+    <MESSAGE value="Paskutinis pusha" />
+    <MESSAGE value="Nepaskutins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nepaskutins" />
   </component>
 </project>
