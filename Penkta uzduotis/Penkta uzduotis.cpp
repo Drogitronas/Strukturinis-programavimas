@@ -98,7 +98,6 @@ void Antras(int pasirinkimas) {
             cout << "6. Baigti\n";
             cout << "Jusu pasirinkimas: ";
             cin >> veiksmas;
-
             if (veiksmas == 1) {
                 pridetiKontaktą(kontaktai, kontaktuKiekis);
             } else if (veiksmas == 2) {
