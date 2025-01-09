@@ -125,7 +125,6 @@ void Antras(int pasirinkimas) {
         }
     }
 }
-
 void pridetiKontaktą(Kontaktas*& kontaktai, int& kontaktuKiekis) {
     Kontaktas naujasKontaktas;
     naujasKontaktas.id = kontaktuKiekis + 1;
